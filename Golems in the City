@@ -1,3 +1,5 @@
+Please Note: In NetLogo, any line that begins with a semicolon (;) is a comment.
+
 ;; built for NetLogo version 6.04
 ;; a small demo model that loads a map
 ;; populates it with golems and gives one of them
