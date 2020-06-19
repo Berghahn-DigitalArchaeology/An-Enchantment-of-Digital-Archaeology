@@ -1,3 +1,5 @@
+Please Note: In NetLogo, any line that begins with a semicolon (;) is a comment.
+
 ;; built for NetLogo version 6.04
 ;; a version of the itineraries model that
 ;; loads a network dataset. ’Travel difficulty’ is represented by
