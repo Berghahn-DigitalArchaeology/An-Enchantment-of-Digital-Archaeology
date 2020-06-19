@@ -1,3 +1,5 @@
+Please Note: In NetLogo, any line that begins with a semicolon (;) is a comment.
+
 ;; Written in NetLogo 6.0.4
 ;; We implement Tom Brughmans’s (2013) simple pot trade model on
 ;; top of a network created by the code snippet ‘network import
