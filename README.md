@@ -1,7 +1,7 @@
 # An-Enchantment-of-Digital-Archaeology
 --Model Code from the Appendices to an Enchantment of Digital Archaeology--
 
-A digital adaptation of these appendices is available on the Berghahn Digital Archaeology companion website at http://berghahnbooks.com/digitalarchaeology
+A digital adaptation of the appendices is available on the Berghahn Digital Archaeology companion website at http://berghahnbooks.com/digitalarchaeology
 
 The Appendices to Shawn Graham’s An Enchantment of Digital Archaeology fashion a uniquely accessible teaching guide that not only envisions NetLogo as a digital archaeological tool, but also introduces the basics of creating a digitally networked environment packaged in a simple archaeological agent-based model.
 
