@@ -83,8 +83,7 @@ to go
   recolor
   check-if-arrived
  ]
- if ((count walkers with [message?]) / (count walkers)) * 100
-= 100 [stop]
+ if ((count walkers with [message?]) / (count walkers)) * 100 = 100 [stop]
 end
 
 to move
@@ -113,10 +112,8 @@ to choose-destination
  set new-location one-of [link-neighbors] of location
  ;; see what places are connected to this one
   ask one-of links with [
-   (end1 = [location] of myself and end2 = [new-location] of
-myself) or
-   (end2 = [location] of myself and end1 = [new-location] of
-myself)]
+   (end1 = [location] of myself and end2 = [new-location] of myself) or
+   (end2 = [location] of myself and end1 = [new-location] of myself)]
  ;; adjust the travel-factor (distance, ease of travel) to the
  ;; value of the new path/link
  
