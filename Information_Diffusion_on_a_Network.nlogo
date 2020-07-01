@@ -47,23 +47,23 @@ walkers-own [ ;; variables that only the walkers own
 
 links-own [strength]
 
-globals [links-list travel-factor] ;; travel factor has to be
+globals [links-list travel-factor] 
+;; travel factor has to be
 ;; accessible by turtles of either breed
 
 to setup
  import-network
- create-walkers num-walkers [
+ create-walkers num-walkers 
+[
   set color red
   set shape "person"
   set size 2
-  set location one-of nodes ;; tells our new walker its new
-;; home
+  set location one-of nodes ;; tells our new walker its new home
   move-to location ;; moves the walker there directly
   set message? false ;; ignorance is bliss
   set new-location one-of [link-neighbors] of location 
     ;; gives the walkers a travel goal
-  set journey-time 1 ;; initial degree of forward movement: one
-;; patch at a time
+  set journey-time 1 ;; initial degree of forward movement: one patch at a time
  ]
  ask one-of walkers [ set message? true ]
  reset-ticks
@@ -84,6 +84,7 @@ to go
   check-if-arrived
  ]
  if ((count walkers with [message?]) / (count walkers)) * 100 = 100 [stop]
+tick
 end
 
 to move
