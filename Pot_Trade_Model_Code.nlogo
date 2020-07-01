@@ -16,6 +16,12 @@ Please Note: In NetLogo, any line that begins with a semicolon (;) is a comment.
 ;; in the interface, create a slider with minimum 1, maximum 100
 ;; and set its value at 50. Call it num-pots
 
+;; in the interface, create a button and give it the code: import-network
+;; in the interface, create a button and give it the code: go
+;; and tick off the box that says 'forever' if you want it to run forever, or leave unticked if you want to
+;; have the code step through one cycle at a time as you click it.
+;;;
+                                                                
 ;; you can create a ‘kill’ button by right-clicking in the
 ;; interface, selecting button, and putting the code below
 ;; into its code panel (without the ;; of course):
