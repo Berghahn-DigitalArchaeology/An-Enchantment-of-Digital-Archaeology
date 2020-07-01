@@ -1,4 +1,4 @@
-Please Note: In NetLogo, any line that begins with a semicolon (;) is a comment.
+;; Please Note: In NetLogo, any line that begins with a semicolon (;) is a comment.
 
 ;; built for NetLogo version 6.04
 ;; a version of the itineraries model that
@@ -21,7 +21,7 @@ Please Note: In NetLogo, any line that begins with a semicolon (;) is a comment.
 ;; num-walkers
 
 ;; and make sure that the minimum is set to 2 and the ‘value’
-(starting position of the slider) is at least 2 or more
+;; (starting position of the slider) is at least 2 or more
 
 ;; you can also build some monitors. For instance, right-click in
 ;; the interface and select new monitor, then paste this code
@@ -54,7 +54,7 @@ to setup
  import-network
  create-walkers num-walkers [
   set color red
-  set shape “person”
+  set shape "person"
   set size 2
   set location one-of nodes ;; tells our new walker its new
 ;; home
@@ -144,9 +144,9 @@ end
 
 to import-network
  clear-all
- set-default-shape turtles “circle”
+ set-default-shape turtles "circle"
  import-attributes
- layout-circle (sort turtles) (max-pxcor – 1)
+ layout-circle (sort turtles) (max-pxcor - 1)
  import-links
  reset-ticks
 
@@ -158,14 +158,14 @@ end
 
 to import-attributes
  ;; This opens the file, so we can use it.
- file-open “attributes.txt”
+ file-open "attributes.txt"
  ;; Read in all the data in the file
  ;; data on the line is in this order:
  ;; node-id attribute1 attribute2
  while [not file-at-end?]
  [
   ;; this reads a single line into a three-item list
-  let items read-from-string (word “[“ file-read-line “]”)
+  let items read-from-string (word "[" file-read-line "]")
   create-nodes 1 [ ;; note the change
    set node-id item 0 items
    set size item 1 items
@@ -184,12 +184,12 @@ end
 
 to import-links
  ;; This opens the file, so we can use it.
- file-open “links.txt”
+ file-open "links.txt"
  ;; Read in all the data in the file
  while [not file-at-end?]
  [
   ;; this reads a single line into a three-item list
-  let items read-from-string (word “[“ file-read-line “]”)
+  let items read-from-string (word "[" file-read-line "]")
   ask get-node (item 0 items)
   [
    create-link-with get-node (item 1 items)
