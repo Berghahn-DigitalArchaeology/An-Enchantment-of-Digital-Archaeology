@@ -34,7 +34,15 @@
 ;; same code
 
 ;; right-click, select plot, and in plot update commands paste
-;; the same code.
+;; plot ((count walkers with [message?]) / (count walkers)) * 100
+
+;; finally, add a button and give it the setup command
+;; add a button and give it the go command , set to run forever.
+
+;; also, if your network when it loads looks like it is smeared across the edges
+;; of the graphics window, right-click on the graphics window and untick the two 'world-wrap' settings
+
+;; you might also want to slow down the speed at which the simulation runs, in order to see what's happening.
 
 breed [nodes node] ;; these are our sites
 nodes-own [node-id]
