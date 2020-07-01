@@ -60,9 +60,8 @@ to setup
 ;; home
   move-to location ;; moves the walker there directly
   set message? false ;; ignorance is bliss
-  set new-location one-of [link-neighbors] of location ;;
-gives
-;; the walkers a travel goal
+  set new-location one-of [link-neighbors] of location 
+    ;; gives the walkers a travel goal
   set journey-time 1 ;; initial degree of forward movement: one
 ;; patch at a time
  ]
@@ -74,11 +73,9 @@ to go
  ;; we ask the walkers:
  ;; go walking,
  ;; talk to anyone else who happens to be present,
- ;; change their color if they’ve encountered someone with the
-message,
+ ;; change their color if they’ve encountered someone with the message,
  ;; test to see if they’ve arrived at their new destination
- ;; and then if everyone has the message we stop the
-simulation.
+ ;; and then if everyone has the message we stop the simulation.
 
  ask walkers [
   move
@@ -93,10 +90,9 @@ end
 to move
  face new-location ;; make sure they’re heading the correct
 ;; direction at all times
- ifelse random-fl oat 1 > 0.5 [fd 1][fd journey-time]
+ ifelse random-float 1 > 0.5 [fd 1][fd journey-time]
 ;; without the chance of them slowing down to one patch at a
-;; time, they sometimes will overshoot the target and get
-caught
+;; time, they sometimes will overshoot the target and get caught
 ;; overshooting it back and forth.
 end
 
