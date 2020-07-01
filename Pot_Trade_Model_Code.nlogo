@@ -1,4 +1,4 @@
-Please Note: In NetLogo, any line that begins with a semicolon (;) is a comment.
+;; Please Note: In NetLogo, any line that begins with a semicolon (;) is a comment.
 
 ;; Written in NetLogo 6.0.4
 ;; We implement Tom Brughmans’s (2013) simple pot trade model on
@@ -98,7 +98,7 @@ end
 
 to import-network
  clear-all
- set-default-shape turtles “circle”
+ set-default-shape turtles "circle"
  import-attributes
  layout-circle (sort turtles) (max-pxcor - 1)
  import-links
@@ -119,7 +119,7 @@ end
 to import-attributes
 
  ;; This opens the file, so we can use it.
- file-open “attributes.txt”
+ file-open "attributes.txt"
 
  ;; Read in all the data in the file
  ;; data on the line is in this order:
@@ -127,7 +127,7 @@ to import-attributes
  while [not file-at-end?]
  [
   ;; this reads a single line into a three-item list
-  let items read-from-string (word “[“ file-read-line “]”)
+  let items read-from-string (word "[" file-read-line "]")
   create-turtles 1 [
    set node-id item 0 items
    set size item 1 items
@@ -146,13 +146,13 @@ end
 
 to import-links
  ;; This opens the file, so we can use it.
- file-open “links.txt”
+ file-open "links.txt"
 
 ;; Read in all the data in the file
  while [not file-at-end?]
  [
   ;; this reads a single line into a three-item list
-  let items read-from-string (word “[“ file-read-line “]”)
+  let items read-from-string (word "[" file-read-line "]")
   ask get-node (item 0 items)
   [
    create-link-to get-node (item 1 items)
