@@ -1,4 +1,4 @@
-Please Note: In NetLogo, any line that begins with a semicolon (;) is a comment.
+;; Please Note: In NetLogo, any line that begins with a semicolon (;) is a comment.
 
 ;; built for NetLogo version 6.04
 ;; a small demo model that loads a map
@@ -24,8 +24,7 @@ Please Note: In NetLogo, any line that begins with a semicolon (;) is a comment.
 ;; 2. Save that map to your computer in the same place you have
 ;; this model.
 ;; In the INTERFACE:
-;; 3. Create a button called ‘1. Load Map’ and give it this
-code:
+;; 3. Create a button called ‘1. Load Map’ and give it this code:
 
 ;; ca
 ;; import-pcolors user-file
@@ -49,6 +48,10 @@ code:
 
 ;; and make sure that the minimum is set to 2 and the ‘value’
 ;; (starting position of the slider) is at least 2 or more
+
+;; make sure to edit the size of the graphics window; 300 x 300 with a patch size of 1 will work well
+;; in most cases. If your map is pixellated, try modifying those settings.
+
 ;;----
 
 ;; the model is built by combining default code snippets in
@@ -91,7 +94,7 @@ to setup
 
  create-walkers num-walkers [
   set color blue
-  set shape “person”
+  set shape "person"
   set size 15
   setxy random-xcor random-ycor
   if pcolor != 38.9 [die]
