@@ -62,13 +62,12 @@ end
 
 to trade-pots
 
- let target one-of turtles with [pots > 0 and count out-linkneighbors
+let target one-of turtles with [pots > 0 and count out-link-neighbors
 > 0]
 
   if target != nobody and random-float 1 > trade-threshold
 
-;; target represents one site, one turtle at a time that we
-want
+;; target represents one site, one turtle at a time that we want
 ;; to run our trade routine
   [
 ;; converts the strength of the link to a number the turtles can
